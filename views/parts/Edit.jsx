@@ -4,7 +4,7 @@ const Default = require('../layouts/Default.jsx')
 class Edit extends React.Component {
   render () {
     const { name, manufacture, description, _id, price } = this.props.part
-    return(
+    return (
       <Default>
         <form method='POST' action={`/parts/${_id}?_method=PUT`}>
           Name: <input type='text' name='name' defaultValue={name} /><br />
