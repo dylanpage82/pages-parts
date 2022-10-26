@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('../layouts/Default.jsx')
 class Index extends React.Component {
-  render(){
+  render () {
     const { parts } = this.props
     return (
       <Default>

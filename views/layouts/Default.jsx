@@ -13,11 +13,11 @@ class Default extends React.Component {
 
           <div className='middle'>
             <h1>Pages Part Store</h1>
-              <nav>
-                <a href='/parts'>Home</a><br />
-                <a href='/parts/new'>Add a new part</a>
-              </nav>
-            
+            <nav>
+              <a href='/parts'>Home</a><br />
+              <a href='/parts/new'>Add a new part</a>
+            </nav>
+
             {this.props.children}
             <nav>
               {part ? <a href={`/parts/${part._id}`}>{part.name} Update Part</a> : ''}
