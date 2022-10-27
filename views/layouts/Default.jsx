@@ -9,7 +9,7 @@ class Default extends React.Component {
           <link rel='stylesheet' href='/css/app.css' />
         </head>
         <body>
-          <div className='left' />
+          <div className='left'></div>
 
           <div className='middle'>
             <h1>Pages Part Store</h1>
@@ -23,7 +23,7 @@ class Default extends React.Component {
               {part ? <a href={`/parts/${part._id}`}>{part.name} Update Part</a> : ''}
             </nav>
           </div>
-          <div class name='right' />
+          <div className='right'></div>
         </body>
       </html>
     )

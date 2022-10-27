@@ -1,7 +1,6 @@
+const React = require('react')
 const Default = require('../layouts/Default.jsx')
 
-React = require('react')
-Default = require('../layouts/Default.jsx')
 class New extends React.Component {
   render () {
     return (
