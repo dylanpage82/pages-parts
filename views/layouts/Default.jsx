@@ -12,9 +12,7 @@ class Default extends React.Component {
           <div className='top'>
             <h1>Pages Part Store</h1>
             <nav>
-              <a href='/user/login'><button>Login</button></a>
-              <a href='/user/signup'><button>SignUp</button></a>
-              {/* {req.session.loggedIn} */}
+              <a href='/user/logout'><button>Logout</button></a>
             </nav>
             
           </div>
