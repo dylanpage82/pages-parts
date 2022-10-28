@@ -9,27 +9,27 @@ class Index extends React.Component {
         <ul>
           {
                          parts.map((part) => {
-                          const { name, price } = part
-                          return (
-                            <li key={part._id}>
-                              <a href={`/parts/${part._id}`}>
-                                {name}
-                              </a>
+                           const { name, price } = part
+                           return (
+                             <li key={part._id}>
+                               <a href={`/parts/${part._id}`}>
+                                 {name}
+                               </a>
 
-                              <br />
-                            
-                              { price }
-                            
-                              <br />
-                              <form method='POST' action={`/parts/${part._id}?_method=DELETE`}>
-                                <input type='submit' value={`Delete ${name} ${price}`} />
-                              </form>
-                            </li>
-                          )
-                        })
+                               <br />
+
+                               $ {price}
+
+                               <br />
+                               <form method='POST' action={`/parts/${part._id}?_method=DELETE`}>
+                                 <input type='submit' value={`Delete ${name} ${price}`} />
+                               </form>
+                             </li>
+                           )
+                         })
                     }
         </ul>
-        </Default>
+      </Default>
     )
   }
 }
