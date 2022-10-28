@@ -11,6 +11,12 @@ class Default extends React.Component {
         <body>
           <div className='top'>
             <h1>Pages Part Store</h1>
+            <nav>
+              <a href='/user/login'><button>Login</button></a>
+              <a href='/user/signup'><button>SignUp</button></a>
+              {/* {req.session.loggedIn} */}
+            </nav>
+            
           </div>
           <div className='left'>
             <a href='/parts'>Home </a><br />

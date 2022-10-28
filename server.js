@@ -1,6 +1,8 @@
 require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
+const session = require('express-session')
+const MongoStore = require("connect-mongo")
 const db = require('./models/db')
 const app = express()
 
@@ -17,8 +19,16 @@ db.once('open', () => {
 
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
+app.use(
+  session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({mongoUrl: process.env.MONGO_URI}),
+    saveUninitialized: true,
+    resave: false,
+  })  
+)
 app.use('/parts', require('./controllers/routeController'))
-app.use('/user', require('.controllers/authController'))
+app.use('/user', require('./controllers/authController'))
 app.get('/', (req, res) => {
   res.render('Home.jsx')
 })

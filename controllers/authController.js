@@ -1,6 +1,6 @@
 const express = require('express')
 const User = require('../models/user')
-const bcrypt = requrie('bcryptjs')
+const bcrypt = require('bcryptjs')
 
 const router = express.Router()
 
@@ -9,8 +9,8 @@ router.get('/signup', (req, res) =>{
 })
 
 router.post('/signup', async (req, res) =>{
-    req.body.passward = await bcrypt.hash(
-        req.body.passward,
+    req.body.password = await bcrypt.hash(
+        req.body.password,
         await bcrypt.genSalt(10)
     )
     User.create(req.body)
@@ -34,6 +34,8 @@ router.post('/login', async (req, res) =>{
         if(user){
             const result = await bcrypt.compare(password, user.password)
             if(result){
+                req.session.username = username
+                req.session.loggedIn = true
                 res.redirect('/parts')
             }else {
                 res.send("password doesn't match")
@@ -46,6 +48,16 @@ router.post('/login', async (req, res) =>{
         console.log(error)
         res.status(400).send(error)
       })
+})
+router.get('/logout', (req, res) =>{
+    req.session.destroy((err) =>{
+      if(err){
+        console.error(err)
+        res.status(500).send(err)
+      }else{
+        res.redirect('/')
+      }
+    })
 })
 
 module.exports = router
