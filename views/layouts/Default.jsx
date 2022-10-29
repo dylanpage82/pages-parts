@@ -11,26 +11,26 @@ class Default extends React.Component {
         <body>
           <div className='top'>
             <h1>Pages Part Store</h1>
-            <nav>
-              <a href='/user/logout'><button>Logout</button></a>
-            </nav>
-            
           </div>
-          <div className='left'>
-            <a href='/parts'>Home </a><br />
-            <a href='/parts/new'> Add a new part</a>
+
+          <div className='nav'>
+            <a href='/parts'> Home</a>
           </div>
 
           <div className='middle'>
-
             {this.props.children}
+            <nav>
+              {part ? <a href={`/parts/${part._id}/edit`}> Update Part</a> : ''}
+            </nav>
+
+          </div>
+
+          <div className='left'>
+            <a href='/parts/new'>Add to Inventory</a>
           </div>
           <div className='right'>
-            <nav>
-              {part ? <a href={`/parts/${part._id}`}>{part.name} Update Part</a> : ''}
-            </nav>
+            <a href='/user/logout'>Logout</a>
           </div>
-          <div className='bottom' />
         </body>
       </html>
     )

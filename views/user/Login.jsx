@@ -1,7 +1,6 @@
 const React = require('react')
 const Default = require('../layouts/Default')
 
-
 class Login extends React.Component {
   render () {
     return (
@@ -15,7 +14,7 @@ class Login extends React.Component {
             <input type='submit' value='Login Account' />
           </fieldset>
         </form>
-        <a href="/user/signup"><button>Sign Up</button></a>
+        <a href='/user/signup'><button>Sign Up</button></a>
       </Default>
     )
   }
