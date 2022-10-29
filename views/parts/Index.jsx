@@ -6,7 +6,6 @@ class Index extends React.Component {
     return (
       <Default>
 
-        <ul>
           {
                          parts.map((part) => {
                            const { name, price } = part
@@ -27,7 +26,6 @@ class Index extends React.Component {
                            )
                          })
                     }
-        </ul>
       </Default>
     )
   }

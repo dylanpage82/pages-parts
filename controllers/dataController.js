@@ -70,13 +70,13 @@ const dataController = {
   buy (req, res, next) {
     Part.findByIdAndUpdate(req.params.id, {$inc: {quantity: -1}}, {new: true}, (err, boughtPart) =>{
       if(err) {
+        console.error(err)
         res.status(400).send({
           msg: err.message
         })
       } else{
         res.locals.data.part = boughtPart
         res.locals.data.loggedIn = req.session.loggedIn
-        Part.save()
         next()
       }
     })

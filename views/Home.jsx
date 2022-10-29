@@ -4,10 +4,7 @@ const Default = require('./layouts/Default')
 class Home extends React.Component {
   render () {
     return (
-      <Default title='Home Page'>
-        <a href='/user/signup'><button>SignUp </button></a>
-        <a href='/user/login'><button> Login</button></a>
-        <p>Please Log In</p>
+      <Default >
       </Default>
     )
   }

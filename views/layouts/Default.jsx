@@ -11,13 +11,26 @@ class Default extends React.Component {
         <body>
           <div className='top'>
             <h1>Pages <br/>Parts</h1>
-            
-          </div>
+            </div>
 
-          <div className='nav'>
-            <a href='/parts'> Home</a>
+        <nav>  
+          <div className='navbar'>
+            <div className='container nav-container'>
+              <input className='checkbox' type="checkbox" />
+              <div className='hamburger-lines'>
+                <span className='line line1'></span>
+                <span className='line line2'></span>
+                <span className='line line3'></span>
+              </div>
+              <div className='menu-items'>
+                <li><a href="/">Home</a></li>
+                <li><a href="/parts">Inventory</a></li>
+                {/* <li>{req.session.loggedIn ? <a href='/parts/new'>Add to Inventory</a> : ""}</li>
+                <li>{req.session.loggedIn ? <a href='/user/logout'>Logout</a> : <a href='/user/login'>Login</a>}</li> */}
+              </div>
+            </div>
           </div>
-
+        </nav>
           <div className='middle'>
             {this.props.children}
             <nav>
@@ -25,14 +38,6 @@ class Default extends React.Component {
             </nav>
 
           </div>
-
-          <div className='left'>
-            <a href='/parts/new'>Add to Inventory</a>
-          </div>
-          <div className='right'>
-            <a href='/user/logout'>Logout</a>
-          </div>
-          <div className='top-right'></div>
         </body>
       </html>
     )
