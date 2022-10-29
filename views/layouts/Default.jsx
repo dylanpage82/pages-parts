@@ -10,7 +10,8 @@ class Default extends React.Component {
         </head>
         <body>
           <div className='top'>
-            <h1>Pages Part Store</h1>
+            <h1>Pages <br/>Parts</h1>
+            
           </div>
 
           <div className='nav'>
@@ -31,6 +32,7 @@ class Default extends React.Component {
           <div className='right'>
             <a href='/user/logout'>Logout</a>
           </div>
+          <div className='top-right'></div>
         </body>
       </html>
     )
