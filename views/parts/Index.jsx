@@ -13,12 +13,13 @@ class Index extends React.Component {
                            return (
                              <li key={part._id}>
                                <a href={`/parts/${part._id}`}>
-                                 {name}
+                                 {name} 
                                </a>
+                               --$ {price}
 
-                               <br />
+                              
 
-                               $ {price}
+                    
 
                                <br />
                                <form method='POST' action={`/parts/${part._id}?_method=DELETE`}>

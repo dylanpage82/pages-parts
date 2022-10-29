@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Poppins:ital,wght@1,200&family=Source+Serif+Pro:wght@200&display=swap');
 
 body{
-    background-color: red;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/148f4aa1-d5bf-461a-9af9-54f616b04873/dea13iu-23c08e91-3813-4cf0-ae55-28a3673d9809.jpg/v1/fill/w_780,h_440,q_75,strp/car_accessories_store_by_salamakhalid72_dea13iu-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDQwIiwicGF0aCI6IlwvZlwvMTQ4ZjRhYTEtZDViZi00NjFhLTlhZjktNTRmNjE2YjA0ODczXC9kZWExM2l1LTIzYzA4ZTkxLTM4MTMtNGNmMC1hZTU1LTI4YTM2NzNkOTgwOS5qcGciLCJ3aWR0aCI6Ijw9NzgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.M-0CjxrGadimrKAk1aagitLXpSPk5GWG_NJPuvC3C9g)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
     display:grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 30px auto ; 
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 30px auto 40%; 
     margin: 0 auto; 
     font-family: 'Poppins', sans-serif;
 
 }
 .top{
-    background-color: rgba(198, 178, 178, 0.838);
+    /* background: url(https://image.shutterstock.com/image-photo/lappeenranta-finland-circa-feb-2016-260nw-598883912.jpg)no-repeat;
+    background-size: cover; */
     grid-column: span 3;
     grid-row-start: 0;
     grid-row-end: 1;
@@ -18,18 +22,20 @@ body{
     font-size: xx-large;
 
 }
-.top nav{
-    text-align: end;
-    font-size: medium;
-    background-color: white;
+.top h1{
+    background-color: rgba(255, 255, 255, 0.614);
+}
+.middle li{
+    text-align: left;
 }
 .nav{
     grid-column-start:2;
     grid-column-end: 3;
     grid-row-start:1;
     grid-row-end: 2;
-    background-color: gray; 
+    background-color:rgb(193, 189, 189);; 
     text-align: center;
+    font-size: larger;
    
 }
 
@@ -39,19 +45,21 @@ body{
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.691);
     text-align: center;
-    font-size: large;
+    font-size: x-large;
 }
 .right{
-    text-align: end;
-    background-color: gray;
-    font-size: large;
+    text-align: right;
+    background-color: rgb(193, 189, 189);
+    font-size: larger;
+    padding-right: 20px;
 }
 .left{
     text-align: center;
-    background-color: gray;
-    font-size: large;
+    background-color:rgb(193, 189, 189);
+    font-size: larger;
+    
 }
 
 .middle div{

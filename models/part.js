@@ -5,7 +5,8 @@ const partSchema = new mongoose.Schema({
   manufacture: { type: String },
   description: { type: String, required: true },
   price: { type: Number, required: true },
-  image: { type: String }
+  image: { type: String },
+  quantity: {type: Number}
 })
 
 const Part = mongoose.model('Part', partSchema)
