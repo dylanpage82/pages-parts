@@ -10,10 +10,10 @@ const viewController = {
     res.render('parts/Edit', res.locals.data)
   },
   newView (req, res, next) {
-    res.render('parts/New')
+    res.render('parts/New', res.locals.data)
   },
   redirectHome (req, res, next) {
-    res.redirect(RESOURCE_PATH)
+    res.redirect(RESOURCE_PATH, res.locals.data)
   },
   redirectShow (req, res, next) {
     res.redirect(`${RESOURCE_PATH}/${res.locals.data.part.id}`)

@@ -3,14 +3,14 @@ const Part = require('../models/part')
 const dataController = {
 
   index (req, res, next) {
-    Part.find({}, (err, allParts) => {
+    Part.find({username:req.session.username}, (err, allParts) => {
       if (err) {
         res.status(404).send({
           msg: err.message
         })
       } else {
         res.locals.data.parts = allParts
-        res.locals.data.loggedIn = req.session.loggedIn
+        res.locals.data.loggedIn = req.session
         next()
       }
     })

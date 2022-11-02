@@ -2,7 +2,10 @@ const React = require('react')
 
 class Default extends React.Component {
   render () {
-    const { part } = this.props
+    const { part, username } = this.props 
+    // console.log("part", part)
+    // console.log("username", username)
+    // console.log(this.props)
     return (
       <html>
         <head>
@@ -10,8 +13,10 @@ class Default extends React.Component {
         </head>
         <body>
           <div className='top'>
-            <h1>Pages <br/>Parts</h1>
+            <div>
+              <h1>Pages <br/>Parts</h1>
             </div>
+          </div>
 
         <nav>  
           <div className='navbar'>
@@ -25,12 +30,24 @@ class Default extends React.Component {
               <div className='menu-items'>
                 <li><a href="/">Home</a></li>
                 <li><a href="/parts">Inventory</a></li>
-                {/* <li>{req.session.loggedIn ? <a href='/parts/new'>Add to Inventory</a> : ""}</li>
-                <li>{req.session.loggedIn ? <a href='/user/logout'>Logout</a> : <a href='/user/login'>Login</a>}</li> */}
+                <li>{this.props.username ? <a href='/parts/new'>Add to Inventory</a> : ""}</li>
+                <li>{this.props.username ? <a href='/user/logout'>Logout</a> : <a href='/user/login'>Login</a>}</li>
               </div>
             </div>
           </div>
         </nav>
+        
+        <div className='decor'>
+          <p>Everyday <br /> Low Price's</p>
+        </div>
+      
+        
+          <div className='lowprice'>
+              <p>Price Match <br /> Guarentee</p>
+          </div>
+        <div className='color'>
+          <p>Order Online <br/> Pick Up In Store</p>
+        </div>
           <div className='middle'>
             {this.props.children}
             <nav>
