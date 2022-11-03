@@ -5,7 +5,7 @@ class Show extends React.Component {
     const { name, manufacture, description, price, image, quantity, _id} = this.props.part
     const part = this.props
     return (
-      <Default part={this.props.part}>
+      <Default part={this.props.part} username={this.props.loggedIn.username}>
         <div className='image'>{image ? <img src={image} /> : ''}</div>
         <p>{name}<br /> {manufacture}<br /> $ {price} <br /> {description}</p>
         <p>{quantity } in stock</p>

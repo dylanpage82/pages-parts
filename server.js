@@ -5,6 +5,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const db = require('./models/db')
 const app = express()
+const { authUser } = require('./models/authUser')
 
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {
@@ -27,9 +28,10 @@ app.use(
     resave: false
   })
 )
+app.use('/', require('./controllers/homeController'))
 app.use('/parts', require('./controllers/routeController'))
 app.use('/user', require('./controllers/authController'))
-app.use('/', require('./controllers/homeController'))
+
 app.listen(3000, () => {
   console.log('Listening on port 3000')
 })

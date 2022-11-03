@@ -2,10 +2,7 @@ const React = require('react')
 
 class Default extends React.Component {
   render () {
-    const { part, username } = this.props 
-    // console.log("part", part)
-    // console.log("username", username)
-    // console.log(this.props)
+    const { part } = this.props 
     return (
       <html>
         <head>

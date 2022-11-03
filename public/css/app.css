@@ -5,7 +5,7 @@ body{
     width: 100vw;
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 9rem 62px auto; 
+    grid-template-rows: 14rem 62px auto; 
     margin: 0 auto; 
     font-family: 'Bebas Neue', cursive;
     background-color: red;
@@ -18,15 +18,15 @@ body{
     grid-row-end: 2;
     font-size: x-large;
     background-color: rgba(196, 200, 189, 1);
-    justify-content: center;
+    
     
 }
 .top div{
     height:150px;
     width: 150px;
     border-radius: 50%;
-    align-items: center;
-    justify-self:center;
+
+    
 }
 .top h1{
     text-align:center;
