@@ -18,3 +18,9 @@ Create |/parts         |POST      | none              | Part.create(req.body)
 Edit   |/parts/:id/edit|GET       | Edit.jsx          |
 Update |/parts/:id     |PUT       | none              | Part.findByIdAndUpdate
 Destroy|/parts/:id     |DELETE    | none              | Part.findByIdAndDelete
+
+[TrelloBoard](https://trello.com/b/JUFogYFr/pages-parts#)
+
+[WireFrame](https://wireframepro.mockflow.com/editor.jsp?editor=on&publicid=M6df4f3087254da39c8b165d90ead37a31667527077065&perm=Create&projectid=MVd3H3K5Dh&spaceid=&ptitle=Untitled&bgcolor=white&category=featured&pcompany=C2e4e1f60bf564d5c8c838096d9f7ba03#/page/80b7351004144a1ca9667d9de870b798/sidebar/off)
+
+[ERD](https://lucid.app/lucidchart/6b8579c8-f388-4dda-9d15-20d61882f4ba/edit?invitationId=inv_2784c601-444a-4926-b03c-c565dcf59098&page=0_0#)

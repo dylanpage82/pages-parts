@@ -10,7 +10,7 @@ class New extends React.Component {
           Manufacture: <input type='text' name='manufacture' placeholder='manufacutre of part' /> <br />
           Description: <input type='text area' name='description' placeholder='part info' /><br />
           Price: <input type='number' name='price' placeholder='price' /><br />
-          Quantity: <input type='number' name='quantity' placeholder='quantity'/><br />
+          Quantity: <input type='number' name='quantity' placeholder='quantity' /><br />
           Image: <input type='text' name='image' placeholder='insert img url' /><br />
           <input type='submit' value='Submit New Part' />
         </form>

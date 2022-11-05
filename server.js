@@ -5,7 +5,6 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const db = require('./models/db')
 const app = express()
-const { authUser } = require('./models/authUser')
 
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {

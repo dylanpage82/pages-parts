@@ -6,7 +6,7 @@ const partSchema = new mongoose.Schema({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   image: { type: String },
-  quantity: {type: Number}
+  quantity: { type: Number }
 })
 
 const Part = mongoose.model('Part', partSchema)

@@ -5,22 +5,18 @@ class Index extends React.Component {
     const { parts } = this.props
     return (
       <Default username={this.props.loggedIn.username}>
-          {
+        {
                          parts.map((part) => {
                            const { name, price } = part
                            return (
                              <li key={part._id}>
                                <a href={`/parts/${part._id}`}>
-                                 {name} 
+                                 {name}
                                </a>
                                --$ {price}
 
-                              
-
-                    
-
                                <br />
-                              
+
                              </li>
                            )
                          })

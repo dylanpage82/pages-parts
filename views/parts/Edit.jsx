@@ -11,7 +11,7 @@ class Edit extends React.Component {
           Manufacure: <input type='text' name='manufacture' defaultValue={manufacture} /><br />
           Description: <input type='text' name='description' defaultValue={description} /><br />
           Price: <input type='number' name='price' defaultValue={price} />
-          Quantity: <input type="number" name='quantity' defaultValue={quantity}></input>
+          Quantity: <input type='number' name='quantity' defaultValue={quantity} />
           <input type='submit' value='Submit Part' />
         </form>
       </Default>

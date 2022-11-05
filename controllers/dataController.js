@@ -3,7 +3,7 @@ const Part = require('../models/part')
 const dataController = {
 
   index (req, res, next) {
-    Part.find({username:req.session.username}, (err, allParts) => {
+    Part.find({ username: req.session.username }, (err, allParts) => {
       if (err) {
         res.status(404).send({
           msg: err.message
@@ -62,19 +62,19 @@ const dataController = {
         })
       } else {
         res.locals.data.part = foundPart
-        res.locals.data.loggedIn = req.session.loggedIn
+        res.locals.data.loggedIn = req.session
         next()
       }
     })
   },
   buy (req, res, next) {
-    Part.findByIdAndUpdate(req.params.id, {$inc: {quantity: -1}}, {new: true}, (err, boughtPart) =>{
-      if(err) {
+    Part.findByIdAndUpdate(req.params.id, { $inc: { quantity: -1 } }, { new: true }, (err, boughtPart) => {
+      if (err) {
         console.error(err)
         res.status(400).send({
           msg: err.message
         })
-      } else{
+      } else {
         res.locals.data.part = boughtPart
         res.locals.data.loggedIn = req.session.loggedIn
         next()
