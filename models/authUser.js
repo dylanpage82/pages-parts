@@ -3,7 +3,7 @@ function authUser (req, res, next) {
   if (req.session.loggedIn === true) {
     next()
   } else {
-    res.redirect('/users/login')
+    res.redirect('/user/login')
   }
 }
 module.exports = {
