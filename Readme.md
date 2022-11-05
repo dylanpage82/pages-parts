@@ -1,6 +1,8 @@
 # Pages Part Store
 Pages Parts is a part store website that allows you to brouse parts and look at the description of the part. If you sign-up and login you will gain access to edit the part information, delete the part, and add new parts to inventory.
 
+<img src = "image/Screen Shot 2022-11-04 at 7.42.31 PM.png">
+
 ### Technologies Used
 HTML, CSS, Javascript, MongoDB, JSX, Node.js
 

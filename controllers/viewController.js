@@ -13,7 +13,7 @@ const viewController = {
     res.render('parts/New', res.locals.data)
   },
   redirectHome (req, res, next) {
-    res.redirect(RESOURCE_PATH, res.locals.data)
+    res.redirect(RESOURCE_PATH)
   },
   redirectShow (req, res, next) {
     res.redirect(`${RESOURCE_PATH}/${res.locals.data.part.id}`)
