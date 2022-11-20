@@ -5,6 +5,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const db = require('./models/db')
 const app = express()
+const PORT = process.env.PORT || 3000
 
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {
@@ -31,6 +32,6 @@ app.use('/', require('./controllers/homeController'))
 app.use('/parts', require('./controllers/routeController'))
 app.use('/user', require('./controllers/authController'))
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Listening on port 3000')
 })
